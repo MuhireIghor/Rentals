@@ -1,8 +1,7 @@
 <template>
 <MainLayout>
-
-  <div class="pt-32 w-full bg-gray-200 relative max-h-screen">
-    <div class="w-full flex">
+  <div class=" pt-20 w-full bg-gray-200 relative max-h-screen">
+    <div class="w-full flex ">
     <!-- section 1 -->
     <div class="h-[300px] ml-32 w-1/2 items-center space-y-12">
       <p class="text-3xl text-black font-semibold text-start">
@@ -20,8 +19,8 @@
     </div>
     <div class="bg-[#b85930] h-[400px] w-1/3 mx-auto rounded-md relative">
       <img
-        src="../assets/car.png"
-        class="w-full h-3/4 absolute -left-32 rotate-180"
+        src="../assets/car2.png"
+        class="w-full h-3/4 absolute -left-32 rotate-[90deg]"
       />
     </div>
     </div>
@@ -31,8 +30,9 @@
   </div>
 </MainLayout>
 </template>
+
 <script>
-import ButtonComponent from '../components/ButtonComponent.vue'
+import ButtonComponent from '@/components/ButtonComponent.vue'
 import SearchBar from '../components/SearchBar.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
 export default {

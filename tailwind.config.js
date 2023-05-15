@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,vue,html.ts,jsx}'],
   theme: {
-    extend: {}
+    extend: {
+      rotate: {
+        200: '200deg'
+      }
+    }
   },
   plugins: []
 }
