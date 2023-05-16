@@ -19,7 +19,7 @@
     </div>
     <div class="bg-[#b85930] h-[400px] w-1/3 mx-auto rounded-md relative">
       <img
-        src="../assets/car2.png"
+        src="../assets/car.png"
         class="w-full h-3/4 absolute -left-32 rotate-[90deg]"
       />
     </div>
