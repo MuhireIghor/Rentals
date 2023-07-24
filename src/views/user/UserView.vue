@@ -4,7 +4,7 @@
     <form class="w-1/2 border-2 rounded shadow-md px-20 space-y-6 p-14 translate-y-12" @submit.prevent="handleSubmit">
         <p class="text-xl font-semibold mb-20">Edit User Details Information</p>
         <p class="text-start font-semibold">Username:<input type="text" class="font-light border-2 rounded p-2 px-12 ml-12 outline-none" placeholder="Username" v-model="formdata.username" @input="updateButtonState" /></p>
-        <p class="text-start font-semibold">Email:<input class="font-light border-2 rounded p-2 px-12 ml-20 outline-none" placeholder="email" v-model="formdata.email" @input="updateButtonState" /></p>
+        <p class="text-start font-semibold">Email:<input class="font-light border-4 rounded p-2 px-12 ml-20 outline-none" placeholder="email" v-model="formdata.email" @input="updateButtonState" /></p>
         <ButtonComponent :isDisabled="disabled"  buttonText="Save" :className="`bg-indigo-500 text-white w-1/3 hover:text-indigo-500 hover:bg-white ${disabled && 'opacity-10'}`" clickHandler=""/>
     </form>
    </div>
