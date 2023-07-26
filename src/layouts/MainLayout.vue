@@ -1,14 +1,17 @@
 <template>
     <NavBar />
-  <div class="pt-32">
+  <div class="">
     <slot></slot>
   </div>
+  <FooterComponent />
 </template>
 <script>
 import NavBar from '@/components/NavBar.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 export default {
   components: {
-    NavBar
+    NavBar,
+    FooterComponent
   }
 }
 </script>
