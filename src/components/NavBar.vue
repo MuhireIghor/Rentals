@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full flex justify-evenly bg-white fixed shadow-md shadow-indigo-200">
+  <div class="w-full flex justify-evenly bg-white shadow-md shadow-indigo-200 px-12">
     <div class="w-1/4 flex items-center">
-        <p>Logo</p>
+     Rental X
     </div>
     <nav
       class="w-2/4 flex justify-evenly mx-auto"
@@ -20,14 +20,14 @@
       >
       <router-link
         class="text-black hover:text-indigo-500"
-        :to="{ path: '/' }"
+        :to="{ name: 'products' }"
         active-class="text-indigo-500"
         >Products</router-link
       >
     </nav>
     <div class='w-1/4 flex gap-6 justify-end mr-4'>
-        <ButtonComponent buttonText='SignUp' :clickHandler="handleSignup" className="bg-indigo-500 text-white" />
-        <ButtonComponent buttonText='Log in' :clickHandler="handleLogin" className="bg-indigo-500 text-white"/>
+        <ButtonComponent buttonText='SignUp' :clickHandler="handleSignup" className="bg-indigo-500 text-white w-1/3" />
+        <ButtonComponent buttonText='Log in' :clickHandler="handleLogin" className="bg-indigo-500 text-white w-1/3"/>
     </div>
   </div>
 </template>
