@@ -1,5 +1,5 @@
 <template>
-  <button :class="`rounded-xl w-1/4 h-10 my-auto hover:shadow-md ${className} `" @click="clickHandler">{{buttonText}}</button>
+  <button type="submit" :class="`rounded-xl h-10 my-auto hover:shadow-md ${className} `" @click="clickHandler">{{buttonText}}</button>
 </template>
 <script>
 export default {
@@ -7,7 +7,10 @@ export default {
   },
   props: {
     buttonText: String,
-    clickHandler: Function,
+    clickHandler: {
+      type: Function,
+      required: false
+    },
     className: String
   }
 }
