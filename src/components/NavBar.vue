@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex justify-evenly bg-white shadow-md shadow-indigo-200 px-12">
+  <div class="w-full flex fixed justify-evenly bg-white shadow-md shadow-indigo-200 px-12">
     <div class="w-1/4 flex items-center">
      Rental X
     </div>
