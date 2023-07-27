@@ -13,7 +13,8 @@
         nam suscipit?
       </p>
       <div class="flex w-full gap-12 ">
-        <ButtonComponent className="bg-white text-black flex items-center justify-center py-8 text-md font-bold" buttonText='Continue with Google Play'  />
+        <!-- <ButtonComponent className="bg-white text-black flex items-center justify-center py-8 text-md font-bold" buttonText='Continue with Google Play'  /> -->
+        <GoogleLoginButton className="bg-indigo-500 p-4 text-white rounded-xl"  />
         <ButtonComponent className="bg-white text-black w-1/2 flex items-center justify-center py-8 text-md font-bold" buttonText='Continue with Apple Store' />
       </div>
     </div>
@@ -35,11 +36,13 @@
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import SearchBar from '../components/SearchBar.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
+import GoogleLoginButton from '@/components/GoogleLoginButton.vue'
 export default {
   components: {
     ButtonComponent,
     SearchBar,
-    MainLayout
+    MainLayout,
+    GoogleLoginButton
   }
 }
 </script>
