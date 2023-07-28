@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import SignupView from '../views/auth/SignupView.vue'
 import LoginView from '../views/auth/LoginView.vue'
 import NotFound from '../views/NotFound.vue'
+import UserView from '../views/user/UserView.vue'
 
 const routes = [
   {
@@ -37,6 +38,12 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'notFound ',
     component: NotFound
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: UserView,
+    meta: { requiresAuth: true }
   }
 ]
 
