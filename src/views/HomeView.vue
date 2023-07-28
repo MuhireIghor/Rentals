@@ -28,6 +28,9 @@
     <div class="w-2/3">
     <SearchBar />
     </div>
+    <div class="bg-white translate-y-20">
+      <p class="font-semibold ">Our Products</p>
+    </div>
   </div>
 </MainLayout>
 </template>

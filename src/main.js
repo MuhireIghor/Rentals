@@ -10,11 +10,11 @@ import './index.css'
 //   scope: 'profile email',
 //   prompt: 'select_account'
 // }
-store.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
     if (!store.getters.isAuthenticated) {
       // Redirect to login page if not authenticated
-      next('/login')
+      next('auth/login')
     } else {
       // Allow access to the protected route
       next()
