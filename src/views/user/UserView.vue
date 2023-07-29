@@ -3,9 +3,9 @@
    <div class="w-full bg-white flex justify-center" >
     <form class="w-1/2 border-2 rounded shadow-md px-20 space-y-6 p-14 translate-y-12" @submit.prevent="handleSubmit">
         <p class="text-xl font-semibold mb-20">Edit User Details Information</p>
-        <p class="text-start font-semibold">Username:<input type="text" class="font-light border-2 rounded p-2 px-12 ml-12 outline-none" placeholder="Username" v-model="formdata.username" /></p>
-        <p class="text-start font-semibold">Email:<input class="font-light border-2 rounded p-2 px-12 ml-20 outline-none" placeholder="email" v-model="formdata.email" /></p>
-        <ButtonComponent buttonText="Save" className="bg-indigo-500 text-white w-1/3 hover:text-indigo-500 hover:bg-white" clickHandler=""/>
+        <p class="text-start font-semibold">Username:<input type="text" class="font-light border-2 rounded p-2 px-12 ml-12 outline-none" placeholder="Username" v-model="formdata.username" @input="updateButtonState" /></p>
+        <p class="text-start font-semibold">Email:<input class="font-light border-2 rounded p-2 px-12 ml-20 outline-none" placeholder="email" v-model="formdata.email" @input="updateButtonState" /></p>
+        <ButtonComponent :isDisabled="disabled"  buttonText="Save" :className="`bg-indigo-500 text-white w-1/3 hover:text-indigo-500 hover:bg-white ${disabled && 'opacity-10'}`" clickHandler=""/>
     </form>
    </div>
 </MainLayout>
@@ -28,15 +28,25 @@ export default {
     },
     handleSubmit () {
       console.log(this.formdata)
+    },
+    updateButtonState () {
+      if (this.formdata.username !== this.$store.state.user.username || this.formdata.email !== this.$store.state.email) {
+        this.disabled = false
+      }
     }
   },
   data () {
     return {
       formdata: {
-        username: '',
-        email: ''
-      }
+        username: this.$store.state.user.username,
+        email: this.$store.state.user.email
+      },
+      disabled: true
     }
+  },
+  watch: {
+    'formdata.username': 'updateButtonState',
+    'formdata.email': 'updateButtonState'
   }
 }
 </script>
