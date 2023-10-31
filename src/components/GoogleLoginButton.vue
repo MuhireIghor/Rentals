@@ -14,7 +14,7 @@ export default {
             client_id:
               '406745584266-r4gev3htl1fnjb4i23n2b2uraaeakiam.apps.googleusercontent.com',
             scope: 'email profile openid',
-            redirect_uri: 'http://localhost:8080',
+            redirect_uri: 'https://rentals-one.vercel.app',
             callback: response => {
               if (response.code) {
                 this.sendCodeToBackend(response.code)
@@ -33,7 +33,7 @@ export default {
             client_id:
             '406745584266-r4gev3htl1fnjb4i23n2b2uraaeakiam.apps.googleusercontent.com',
             client_secret: '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',
-            redirect_uri: 'http://localhost:8080',
+            redirect_uri: 'https://rentals-one.vercel.app/',
             grant_type: 'authorization_code'
           }
         )
