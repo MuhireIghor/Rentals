@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       rotate: {
         200: '200deg'
+      },
+      colors: {
+        'regal-blue': '#243c5a'
       }
     }
   },
